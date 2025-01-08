@@ -12,6 +12,7 @@ export default function ManageCategoryPage({
     // If the category doesn't exist and an ID was provided, show the not-found page
     if (searchParams.id && !isValidCategory(parseInt(searchParams.id))) {
         notFound()
+
     }
 
     return (
