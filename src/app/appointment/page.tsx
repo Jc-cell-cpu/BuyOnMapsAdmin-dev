@@ -117,7 +117,7 @@ export default function AppointmentsList() {
             <div className="container mx-auto p-4 space-y-6">
                 {/* Summary Cards */}
                 <div className="grid gap-4 md:grid-cols-4">
-                    <Card>
+                    <Card className="dark:bg-slate-800">
                         <CardHeader className="pb-2">
                             <CardTitle className="text-sm font-medium">
                                 Total Appointments
@@ -127,7 +127,7 @@ export default function AppointmentsList() {
                             <div className="text-2xl font-bold">{totalAppointments}</div>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="dark:bg-slate-800">
                         <CardHeader className="pb-2">
                             <CardTitle className="text-sm font-medium">Booked</CardTitle>
                         </CardHeader>
@@ -135,7 +135,7 @@ export default function AppointmentsList() {
                             <div className="text-2xl font-bold text-green-600">{bookedCount}</div>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="dark:bg-slate-800">
                         <CardHeader className="pb-2">
                             <CardTitle className="text-sm font-medium">Cancelled</CardTitle>
                         </CardHeader>
@@ -143,7 +143,7 @@ export default function AppointmentsList() {
                             <div className="text-2xl font-bold text-red-600">{cancelledCount}</div>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="dark:bg-slate-800">
                         <CardHeader className="pb-2">
                             <CardTitle className="text-sm font-medium">Rebooked</CardTitle>
                         </CardHeader>
@@ -154,11 +154,11 @@ export default function AppointmentsList() {
                 </div>
 
                 {/* Filter and List */}
-                <Card>
-                    <CardHeader>
+                <Card className="dark:bg-slate-800">
+                    <CardHeader className="dark:bg-slate-800">
                         <CardTitle>Appointments</CardTitle>
                         <CardDescription>Manage your appointments here</CardDescription>
-                        <div className="mt-4 w-[200px]">
+                        <div className="mt-4 w-[200px] dark:bg-slate-800">
                             <Select
                                 value={statusFilter}
                                 onValueChange={(value) =>

@@ -27,15 +27,15 @@ export function TransactionFilters() {
             <div className="flex flex-1 items-center gap-2">
                 <Input
                     placeholder="Search transactions..."
-                    className="max-w-[300px]"
+                    className="max-w-[300px] dark:bg-slate-800"
                 />
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        <Button variant="outline" size="icon">
+                        <Button variant="outline" className="dark:bg-slate-800" size="icon">
                             <Filter className="h-4 w-4" />
                         </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="w-[200px]">
+                    <DropdownMenuContent align="end" className="w-[200px] dark:bg-slate-800">
                         <DropdownMenuCheckboxItem
                             checked={statuses.includes("completed")}
                             onCheckedChange={(checked) =>
@@ -76,7 +76,7 @@ export function TransactionFilters() {
                 </DropdownMenu>
                 <Popover>
                     <PopoverTrigger asChild>
-                        <Button variant="outline" className="w-[250px] justify-start text-left font-normal">
+                        <Button variant="outline" className="w-[250px] justify-start text-left font-normal dark:bg-slate-800">
                             <CalendarIcon className="mr-2 h-4 w-4" />
                             {date?.from ? (
                                 date.to ? (
@@ -104,7 +104,7 @@ export function TransactionFilters() {
                 </Popover>
             </div>
             <div className="flex items-center gap-2">
-                <Button variant="outline">Export</Button>
+                <Button variant="outline" className="dark:bg-slate-800">Export</Button>
                 <Button>Generate Report</Button>
             </div>
         </div>

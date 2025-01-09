@@ -53,7 +53,7 @@ export function ListingItem({ listing }: ListingItemProps) {
                     </>
                 )}
                 <Button onClick={() => handleAction('delete')} variant="outline" disabled={isLoading}>Delete</Button>
-                <Button onClick={() => {/* Open edit modal */ }} variant="outline" disabled={isLoading}>Edit</Button>
+                {/* <Button onClick={() => { }} variant="outline" disabled={isLoading}>Edit</Button> */}
                 <Button onClick={() => {/* Open details modal */ }} variant="outline" disabled={isLoading}>View Details</Button>
             </div>
         </div>

@@ -61,7 +61,7 @@ export default function AdminProfilePage() {
   return (
     <div className="container mx-auto py-10 space-y-8">
       {/* Profile Overview Section */}
-      <Card>
+      <Card className="dark:bg-slate-800">
         <CardHeader>
           <div className="flex items-start justify-between">
             <div>
@@ -164,7 +164,7 @@ export default function AdminProfilePage() {
       </Card>
 
       {/* Account Settings */}
-      <Card>
+      <Card className="dark:bg-slate-800">
         <CardHeader>
           <CardTitle>Account Settings</CardTitle>
           <CardDescription>
@@ -205,7 +205,7 @@ export default function AdminProfilePage() {
       </Card>
 
       {/* Activity Log */}
-      <Card>
+      <Card className="dark:bg-slate-800">
         <CardHeader>
           <CardTitle>Activity Log</CardTitle>
           <CardDescription>

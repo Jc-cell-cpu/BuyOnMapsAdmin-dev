@@ -39,11 +39,11 @@ export function ActivityLog({ activities }: { activities: Activity[] }) {
                         placeholder="Search activities..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="max-w-xs"
+                        className="max-w-xs dark:bg-slate-900 dark:border-slate-400"
                     />
                 </div>
                 <Select value={filter} onValueChange={setFilter}>
-                    <SelectTrigger className="w-[180px]">
+                    <SelectTrigger className="w-[180px] dark:bg-slate-900 dark:border-slate-400">
                         <SelectValue placeholder="Filter by type" />
                     </SelectTrigger>
                     <SelectContent>

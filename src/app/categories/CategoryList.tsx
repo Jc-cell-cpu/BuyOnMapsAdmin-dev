@@ -74,18 +74,19 @@ export default function CategoryList() {
     const totalPages = Math.ceil(categories.length / itemsPerPage)
 
     return (
-        <div className="container mx-auto p-4">
-            <div className="flex items-center justify-between mb-4">
-                <h1 className="text-2xl font-bold">Category List</h1>
-                <Button
-                    onClick={() => router.push('/categories/manage')}
-                    className="flex items-center"
-                >
-                    <Plus className="mr-2 h-4 w-4" /> Add Category
-                </Button>
-            </div>
+        <Card className='border-none shadow-2xl px-8 dark:bg-slate-800'>
+            <div className="container mx-auto p-4">
+                <div className="flex items-center justify-between mb-4">
+                    <h1 className="text-2xl font-bold">Category List</h1>
+                    <Button variant={"gradiant"}
+                        onClick={() => router.push('/categories/[id]/manage')}
+                        className="flex items-center"
+                    >
+                        <Plus className="mr-2 h-4 w-4" /> Add Category
+                    </Button>
+                </div>
 
-            <Card>
+
                 <Table>
                     <TableHeader>
                         <TableRow>
@@ -102,12 +103,12 @@ export default function CategoryList() {
                                 <TableCell>
                                     {category.image && (
                                         <div className="relative h-[50px] w-[50px]">
-                                            <Image
+                                            {/* <Image
                                                 src={category.image}
                                                 alt={category.name}
                                                 fill
                                                 className="rounded-md object-cover"
-                                            />
+                                            /> */}
                                         </div>
                                     )}
                                 </TableCell>
@@ -147,43 +148,44 @@ export default function CategoryList() {
                         ))}
                     </TableBody>
                 </Table>
-            </Card>
 
-            {totalPages > 1 && (
-                <Pagination className="mt-4">
-                    <PaginationContent>
-                        <PaginationItem>
-                            <PaginationPrevious
-                                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                                className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
-                            />
-                        </PaginationItem>
-                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                            <PaginationItem key={page}>
-                                <PaginationLink
-                                    onClick={() => setCurrentPage(page)}
-                                    isActive={currentPage === page}
-                                >
-                                    {page}
-                                </PaginationLink>
+
+                {totalPages > 1 && (
+                    <Pagination className="mt-4">
+                        <PaginationContent>
+                            <PaginationItem>
+                                <PaginationPrevious
+                                    onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                                    className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                                />
                             </PaginationItem>
-                        ))}
-                        <PaginationItem>
-                            <PaginationNext
-                                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-                                className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
-                            />
-                        </PaginationItem>
-                    </PaginationContent>
-                </Pagination>
-            )}
+                            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                <PaginationItem key={page}>
+                                    <PaginationLink
+                                        onClick={() => setCurrentPage(page)}
+                                        isActive={currentPage === page}
+                                    >
+                                        {page}
+                                    </PaginationLink>
+                                </PaginationItem>
+                            ))}
+                            <PaginationItem>
+                                <PaginationNext
+                                    onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
+                                    className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                                />
+                            </PaginationItem>
+                        </PaginationContent>
+                    </Pagination>
+                )}
 
-            <DeleteConfirmDialog
-                isOpen={deleteCategory !== null}
-                onClose={() => setDeleteCategory(null)}
-                onConfirm={confirmDelete}
-            />
-        </div>
+                <DeleteConfirmDialog
+                    isOpen={deleteCategory !== null}
+                    onClose={() => setDeleteCategory(null)}
+                    onConfirm={confirmDelete}
+                />
+            </div>
+        </Card>
     )
 }
 

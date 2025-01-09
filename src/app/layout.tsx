@@ -4,7 +4,7 @@ import "@/css/satoshi.css";
 import "@/css/style.css";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
-// import GradientBackground from "@/components/gradientbackground/gradient-background";
+import GradientBackground from "@/components/gradientbackground/gradient-background";
 
 export default function RootLayout({
   children,
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        {/* <GradientBackground /> */}
+        <GradientBackground />
         {loading ? <Loader /> : children}
       </body>
     </html>

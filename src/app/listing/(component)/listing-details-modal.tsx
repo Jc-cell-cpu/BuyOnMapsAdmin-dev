@@ -2,7 +2,8 @@
 
 import { useState } from 'react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button'
+// import { Card } from '@/components/ui/card'
 
 interface ListingDetails {
     id: string
@@ -41,6 +42,7 @@ export function ListingDetailsModal() {
     }
 
     return (
+        // <Card>
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogContent>
                 <DialogHeader>
@@ -58,5 +60,6 @@ export function ListingDetailsModal() {
                 )}
             </DialogContent>
         </Dialog>
+        // </Card>
     )
 }

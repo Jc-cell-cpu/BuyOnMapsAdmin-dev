@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation"
-
 import { Card } from "@/components/ui/card"
 import CategoryForm from "../../CategoryForm"
 

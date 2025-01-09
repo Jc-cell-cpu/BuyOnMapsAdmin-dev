@@ -77,7 +77,7 @@ export default function UserList() {
     <div className="container mx-auto py-10">
       <Tabs defaultValue="accounts" className="space-y-6">
         <div className="flex items-center justify-between">
-          <TabsList>
+          <TabsList className="dark:bg-slate-800">
             <TabsTrigger value="accounts" className="flex items-center gap-2">
               <Users className="h-4 w-4" />
               User Accounts
@@ -94,7 +94,7 @@ export default function UserList() {
         </div>
 
         <TabsContent value="accounts" className="space-y-4">
-          <Card>
+          <Card className='border-none shadow-2xl px-8 dark:bg-slate-800'>
             <CardHeader>
               <CardTitle>User Accounts</CardTitle>
               <CardDescription>
@@ -164,7 +164,7 @@ export default function UserList() {
         </TabsContent>
 
         <TabsContent value="activity" className="space-y-4">
-          <Card>
+          <Card className="border-none shadow-2xl px-8 dark:bg-slate-800">
             <CardHeader>
               <CardTitle>User Activity</CardTitle>
               <CardDescription>
@@ -200,7 +200,7 @@ export default function UserList() {
         </TabsContent>
 
         <TabsContent value="subscriptions" className="space-y-4">
-          <Card>
+          <Card className="border-none shadow-2xl px-8 dark:bg-slate-800">
             <CardHeader>
               <CardTitle>User Subscriptions</CardTitle>
               <CardDescription>

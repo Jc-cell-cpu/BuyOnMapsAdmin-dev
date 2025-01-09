@@ -36,7 +36,7 @@ interface TransactionTableProps {
 
 export function TransactionTable({ transactions }: TransactionTableProps) {
     return (
-        <div className="rounded-md border">
+        <div className="rounded-md border dark:bg-slate-800">
             <Table>
                 <TableHeader>
                     <TableRow>
@@ -80,7 +80,7 @@ export function TransactionTable({ transactions }: TransactionTableProps) {
                                             <span className="sr-only">Open menu</span>
                                         </Button>
                                     </DropdownMenuTrigger>
-                                    <DropdownMenuContent align="end">
+                                    <DropdownMenuContent align="end" className="dark:bg-slate-800 dark:hover:bg-slate-700">
                                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                                         <DropdownMenuSeparator />
                                         <DropdownMenuItem>View details</DropdownMenuItem>
