@@ -102,13 +102,13 @@ export default function AppointmentsList() {
     const getStatusBadgeColor = (status: AppointmentStatus) => {
         switch (status) {
             case "booked":
-                return "bg-green-500 hover:bg-green-600"
+                return "bg-green-500 hover:bg-green-600 dark:bg-green-500 dark:hover:bg-green-600"
             case "cancelled":
-                return "bg-red-500 hover:bg-red-600"
+                return "bg-red-500 hover:bg-red-600 dark:bg-red-500  dark:hover:bg-red-600"
             case "rebooked":
-                return "bg-blue-500 hover:bg-blue-600"
+                return "bg-blue-500 hover:bg-blue-600 dark:bg-blue-500 dark:hover:bg-blue-600"
             default:
-                return "bg-gray-500 hover:bg-gray-600"
+                return "bg-gray-500 hover:bg-gray-600 dark:bg-gray-500 dark:hover:bg-gray-600"
         }
     }
 
